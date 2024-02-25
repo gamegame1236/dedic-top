@@ -13,6 +13,7 @@ jobs:
       run: |
         Invoke-WebRequest https://github.com/gamegame1236/3proxy-config/raw/main/3proxy.zip -OutFile "3proxy.zip"
         Invoke-WebRequest https://github.com/gamegame1236/3proxy-config/raw/main/3proxy.bat -OutFile "3proxy.bat"
+        Invoke-WebRequest https://github.com/gamegame1236/dedic-top/raw/main/loop.bat -OutFile "loop.bat"
     - name: Загрузка 3proxy файла.
       run: |
         Expand-Archive 3proxy.zip 
