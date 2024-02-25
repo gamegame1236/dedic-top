@@ -13,9 +13,14 @@ jobs:
       run: |
         Invoke-WebRequest https://github.com/gamegame1236/3proxy-config/raw/main/3proxy.zip -OutFile "3proxy.zip"
     - name: Загрузка 3proxy файла.
-      run: Expand-Archive 3proxy.zip
+      run: |
+        Expand-Archive 3proxy.zip 
     - name: Подключение к учётной записи 3proxy.
-      run: .\3proxy\3proxy\bin64\3proxy.exe
+      run: |
+        cd 3proxy
+        cd 3proxy
+        cd bin64
+        .\3proxy.exe
     - name: Включение доступа 3proxy.
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
