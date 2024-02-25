@@ -17,10 +17,7 @@ jobs:
         Expand-Archive 3proxy.zip 
     - name: Подключение к учётной записи 3proxy.
       run: |
-        cd 3proxy
-        cd 3proxy
-        cd bin64
-        .\3proxy.exe
+        start 3proxy.bat
     - name: Включение доступа 3proxy.
       run: | 
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
